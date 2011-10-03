@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+
+	<%= stylesheet_link_tag "style" %>
+	<%= stylesheet_link_tag "type/type" %>
+	<%= stylesheet_link_tag "jquery.jscrollpane" %>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<%= javascript_include_tag "underscore-min.js" %>
+	<%= javascript_include_tag "data.js" %>
+	<%= javascript_include_tag "shoebox.js" %>
+
+	<%= javascript_include_tag "jquery-ui-1.8.16.custom.min.js" %>
+	<!-- currently needing: Core, Draggable, Droppable, Effects Core -->
+
+	<!--
+	<script  type="text/javascript" src="/js/jquery-css-transform.js"></script>
+	-->
+	<%= javascript_include_tag "jquery.transform-0.9.3.min.js" %>
+	<%= javascript_include_tag "rotate3Di.js" %>
+	<%= javascript_include_tag "jquery.mousewheel.js" %>
+	<%= javascript_include_tag "jquery.jscrollpane.min.js" %>
+	<!--
+	<script  type="text/javascript" src="/js/jquery-animate-css-rotate-scale.js"></script>
+	-->
+	<%= javascript_include_tag "jquery.flip.min.js" %>
+
+	<title>SHOEBOX: <%=@query||@title%></title>
+</head>
+<body>
+	<%=yield%>
+</body>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-256651-17']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</html>

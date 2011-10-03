@@ -1,0 +1,44 @@
+<%@title = 'Welcome'%>
+<div id="shoebox">
+	<canvas id="overlay" height="800"></canvas>
+	<div id="toolbar">
+		<div class="container">
+			<div id="sorts">
+				Sort by
+				<a href="javascript:void(0)">Location</a>
+				<a href="javascript:void(0)">Date</a>
+				<a href="javascript:void(0)">Popularity</a>
+			</div>
+			<div class="title">
+				<textarea></textarea>
+				<img class="background" src="/assets/title-inside.jpg" />
+				<span class="edit">Edit</span>
+				<div class="shadow"></div>
+			</div>
+			<a href="http://1000memories.com/" class="logo-1000"><img src="/assets/logo-1000.png" /></a>
+		</div>
+	</div>
+	<div class="loading">
+		<img src="/assets/ico/loading.gif" class="ico" /> Loading...
+	</div>
+	<div id="canvas">
+		<div id="pics"></div>
+		<div id="chart"><div id="axis"></div></div>
+		<div id="trash">
+			<div class="text">
+				<span>Drag a photo here to remove</span><br>
+				<span class="full">(Click here to restore removed photos)</span>
+			</div>
+			<div class="background"></div>
+		</div>
+		<a href="http://momentusmedia.com" class="logo-mom"><img src="/assets/logo-mom.png" /></a>
+		<a href="javascript:void(0)" class="ear left"><img src="/assets/left-arrow.png" />Start Over</a>
+		<a href="javascript:void(0)" class="ear right"><img src="/assets/right-arrow.png" />Save & Share<br>on Facebook</a>
+	</div>
+	<img class="canvas-background" src="/assets/texture/bkg-mid-res.jpg" />
+</div>
+<script>
+	$(function() {
+		BOX.data.fetch('<%=@set%>', <%=@size||false%>)
+	})
+</script>
